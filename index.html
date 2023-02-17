@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Joti+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Stylish&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="LoginCSS/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="LoginCSS/bootstrap.min.css">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Login to Bird's Eye View</title>
+  </head>
+  <body>
+  
+  <!--Login Page-->
+    <div class="half">
+      <div class="bg order-1 order-md-2"></div>
+      <div class="contents order-2 order-md-1">
+
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-md-6">
+              <div class="form-block">
+                <div class="text-center mb-5">
+                <h3 style="font-family: 'Joti One', cursive;">Login to <strong style="font-size: 40px; color: rgb(149, 114, 24);">Bird's Eye View</strong></h3>
+                <h5 style= "font-family: 'Joti One'; font-size: 22px; color: rgb(99, 158, 5);">With Jurong Bird Park</h5>
+                </div>
+                <form action="#" method="post" id="frmCreateUser">
+                  <div class="form-group first">
+                    <label for="email" style="color: rgb(2, 26, 112);"><strong>Email</strong></label>
+                    <input type="email" class="form-control" placeholder="Enter Email" id="email" onfocus="this.value=''" style="font-size: 18px; background-color: rgb(222, 238, 253); color:rgb(3, 31, 88);">
+                  </div>
+                  <div class="form-group last mb-3">
+                    <label for="password" style="color: rgb(2, 26, 112);"><strong>Password</strong></label>
+                    <input type="password" class="form-control" placeholder="Enter Password" id="password" onfocus="this.value=''" style="font-size: 18px; background-color: rgb(222, 238, 253); color:rgb(3, 31, 88);">
+                  </div>
+                  <div>
+                    <h3 style = "color: red; font-size: 16px;" id="errorContentMsg"> </h3>
+                    <h3 style = "color: red; font-size: 16px;" id="validationMsg"> </h3>
+                  </div>
+                  
+                  <div class="d-sm-flex mb-5 align-items-center">
+                    <span class="ml-auto"><a href="#" id="forgotPwd" style="color: rgb(2, 26, 112);">Forgot Password</a></span> 
+                  </div>
+
+                  <button type="submit" id="submit" name="submit" class="btn btn-block btn-primary" style="font-size: 24px; background-color: rgb(74, 157, 11); border-color: white;">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>    
+    </div>
+    
+    
+
+    <script src="script.js" type="module"></script>
+    <script src="LoginJS/jquery-3.3.1.min.js"></script>
+    <script src="LoginJS/popper.min.js"></script>
+    <script src="LoginJS/bootstrap.min.js"></script>
+  </body>
+</html>

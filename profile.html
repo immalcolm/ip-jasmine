@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>User Profile and Statistic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Style -->
+    <link href="https://fonts.googleapis.com/css2?family=Stylish&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Joti+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="LoginCSS/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap CSS -->
+	  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="BootstrapCSS/app.css">
+	  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/78faa4f6df.js" crossorigin="anonymous"></script>
+</head>
+
+<body style="font-family: 'Stylish', sans-serif; font-size: 18px; background-image: url(img/);">
+
+  <div>
+    <!--Leaderboard Page-->
+    <div class="container" style="font-size: 18px;">
+        <div class="main-body">
+            <nav aria-label="breadcrumb" class="main-breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html" onclick="logOut()">Log Out</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">User Profile & Statistic</a></li>
+                    <li class="breadcrumb-item"><a href="myphotos.html">Discover More Photos</a></li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <div class="row gutters-sm" style="margin-top: 50px; display: flex; flex-direction: row;">
+      <h3 style="font-size: 25px; text-align: center;"><strong><i class="fa-solid fa-dove"></i> User Information</strong></h3>
+        <div class="col-md-4 mb-3">                   
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex flex-column align-items-center text-center">
+                <img src="img/bird Avatar.jpg" alt="Admin" class="rounded-circle" width="150" id="userImg">
+                <div class="mt-3" style="display: flex; flex-direction: row;">
+                  <h4 id = "currentUsername" style="font-size: 30px">John Doe</h4>
+                  <button id="editBtnName" style="margin-left: 20px;"><i class="fa-solid fa-pen-to-square"></i></button>
+                </div>
+                <div>
+                  <h3 style="color: rgb(0, 181, 0)" id="successConfirmation"></h3>
+                </div>
+                <div id="inputNewUsername" style="display: none;">
+                  <div class="input-group">
+                    <form class="input-group-append">
+                      <span class="input-group-text" id="" style="font-size: 16px;"><strong>New Username</strong></span>
+                      <input type="text" class="form-control" id="newInputName" placeholder="At Least 3 Characters" minlength="3" onfocus="this.value=''">
+                      <button class="btn btn-outline-secondary" id="submitNewName" type="button" style="border-color: green;">Save</button>
+                    </form>
+                  </div>
+                </div>
+                <div>
+                  <h3 id="errorName" style="color: red; font-size: 18px; margin-top: 20px;"></h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="col-md-8">
+            <div class="card mb-3">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0" style="font-size: 18px">Email:</h6>
+                  </div>
+                  <div class="col-sm-9 text-secondary">
+                    <span id = "currentEmail">johndoe@gmail.com</span>    
+                    <button id="editBtnEmail" style="margin-left: 5px;"><i class="fa-solid fa-pen-to-square"></i></button>                   
+                  </div>
+
+                  
+                  <div id="inputNewEmail" style="display: none; margin-top: 20px;">
+                    <div class="input-group">
+                      <form class="input-group-append">
+                        <span class="input-group-text" id="" style="font-size: 16px;"><strong>New Email</strong></span>
+                        <input type="email" class="form-control" id="newInputEmail" placeholder="Eg. john@gmail.com" onfocus="this.value=''" size="35" style="font-size: 18px;">
+                        <button class="btn btn-outline-secondary" id="submitNewEmail" type="button" style="border-color: green;">Save</button>
+                      </form>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 style="color: rgb(0, 181, 0); font-size: 18px;" id="successConfirmationEmail"></h3>
+                    <h3 id="errorEmail" style="color: red; font-size: 18px; margin-top: 20px;"></h3>
+                  </div>
+
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0" style="font-size: 18px">Player Status in Game:</h6>
+                  </div>
+                  <div class="col-sm-9 text-secondary" id="currentActive">
+                    True
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0" style="font-size: 18px">Created On:</h6>
+                  </div>
+                  <div class="col-sm-9 text-secondary" id="createdOn">
+                    10/12/22
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0" style="font-size: 18px">Updated On:</h6>
+                  </div>
+                  <div class="col-sm-9 text-secondary" id="updatedOn">
+                    16/12/22
+                  </div>
+                </div>
+              </div>
+            </div>        
+          </div>
+      </div>
+
+      <hr />
+
+    <main class="content" style="padding-top: 50px">
+      <h3 style="font-size: 25px; text-align: center;"><strong><i class="fa-solid fa-feather"></i> User Statistic Dashboard</strong></h3>
+      <div class="container-fluid p-0">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body" style="padding-bottom: 40px;">
+                <div class="row">
+                  <div class="col mt-0">
+                    <h5 class="card-title" style="font-size: 18px; letter-spacing: 0.5px; color: rgb(46, 183, 0);">Total Points</h5>
+                  </div>
+                  <div class="col-auto">
+                    <div class="stat text-primary">
+                      <i class="align-middle" data-feather="award"></i>
+                    </div>
+                  </div>
+                </div>
+                <h1 class="mt-1 mb-3" id="totalPoints">6</h1>
+              </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col mt-0">
+                          <h5 class="card-title" style="font-size: 18px; letter-spacing: 0.5px; color: rgb(0, 153, 255);">Fastest Time to Complete All the Activities</h5>
+                        </div>
+
+                        <div class="col-auto">
+                          <div class="stat text-primary">
+                            <i class="align-middle" data-feather="clock"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <h1 class="mt-1 mb-3" id="fastestTime">15</h1>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Next column -->
+                <div class="col-sm-6">
+                  <div class="card">
+                    <div class="card-body" id="sliderPortion" style="padding-bottom: 0;">
+                      <div class="row">
+                        <div class="col mt-0">
+                          <h5 class="card-title" style="font-size: 18px; letter-spacing: 0.5px; color: rgb(207, 159, 0);">Current Points Left to Reach Reward</h5>
+                        </div>
+
+                        <div class="col-auto">
+                          <div class="stat text-primary">
+                            <i class="align-middle" data-feather="star"></i>
+                          </div>
+                        </div>
+                      </div>            
+                      <div id="sliderContainer">
+                        <h1 class="mt-1 mb-3" id = "pointsLeftToReachReward">0</h1><input type="range" id="myRange"><h1 class="mt-1 mb-3" id = "pointRewards">500</h1>
+                      </div>      
+                      <h3 id='congratsMsg' style="text-align: center; color: rgb(188, 144, 0); font-size: 18px;">You Need: <span id="pointsLeft" style="text-decoration: underline; font-size: 23px;">0</span> More Points</h3>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col mt-0">
+                          <h5 class="card-title" style="font-size: 18px; letter-spacing: 0.5px; color:rgb(232, 66, 0)">Total Number of Incorrect Answers</h5>
+                        </div>
+
+                        <div class="col-auto">
+                          <div class="stat text-primary">
+                            <i class="align-middle" data-feather="x-square"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <h1 class="mt-1 mb-3" id="incorrectAns">64</h1>
+                    </div>
+                  </div>
+          </div>
+        </div>
+    </main>
+
+    <div>
+      <footer class="footer" style="margin-top: 50px">
+        <div class="container-fluid">
+          <div class="row text-muted">
+            <div class="col-6 text-start">
+              <p class="mb-0">
+                <span class="text-muted" style ="color: rgb(113, 113, 113);">&copy; <strong style="font-family: 'Stylish', sans-serif; font-size: 16px; color: rgb(113, 113, 113);">2023 Bird's Eye View by 3Trotters. All Rights Reserved</strong></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+    <script src="script.js" type="module"></script>
+    <script src="BootstrapJS/app.js"></script>
+  </body>
+</html>
