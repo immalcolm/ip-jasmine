@@ -171,10 +171,7 @@ const auth = getAuth();
 //retrieve element from form
 var frmCreateUser = document.getElementById("frmCreateUser");
 
-//check which page user lands
-if(sPage == "index.html")
-{
-  //we create a button listener to listen when someone clicks
+//we create a button listener to listen when someone clicks
   frmCreateUser.addEventListener("submit", function(e) {
     e.preventDefault();
     var email = document.getElementById("email").value;
@@ -187,6 +184,25 @@ if(sPage == "index.html")
 
 
   });
+
+//check which page user lands
+if(sPage == "index.html")
+{
+  //we create a button listener to listen when someone clicks
+    /*
+  frmCreateUser.addEventListener("submit", function(e) {
+    e.preventDefault();
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+
+    signInUser(email, password);
+    console.log("email" + email + "password" + password);
+
+    
+
+
+  });
+  */
 }else if(sPage == "profile.html")
 {
     var profilesArray=[]
